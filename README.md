@@ -14,12 +14,12 @@ interesting thing ... \
 https://docs.ros.org/en/foxy/Tutorials/Building-Realtime-rt_preempt-kernel-for-ROS-2.html
 
 \\--------------------------------------\
-## commands
+## commands to run basic ros2 nodes
 ```
 docker pull osrf/ros:foxy-desktop
 docker run -it osrf/ros:foxy-desktop
 ```
-
+## ross dds options
 by default, the ros2 foxy docker image uses fastrtp dds, 
 ```
 sudo apt install ros-galactic-rmw-fastrtps-cpp
