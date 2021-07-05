@@ -19,3 +19,21 @@ https://docs.ros.org/en/foxy/Tutorials/Building-Realtime-rt_preempt-kernel-for-R
 docker pull osrf/ros:foxy-desktop
 docker run -it osrf/ros:foxy-desktop
 ```
+
+by default, the ros2 foxy docker image uses fastrtp dds, 
+```
+sudo apt install ros-galactic-rmw-fastrtps-cpp
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+```
+
+but can be switched to cyclonedds by
+```
+sudo apt install ros-foxy-rmw-cyclonedds-cpp
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+```
+as described here, \
+https://docs.ros.org/en/galactic/Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html
+
+or rti dds(if commercial or trial license installed).
+
+I tried one node (publisher) using cyclonedds, the other node (subscriber) using fastrtp, and the two nodes can communicate without issue!
