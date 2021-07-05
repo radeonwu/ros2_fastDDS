@@ -10,6 +10,9 @@ https://hub.docker.com/r/osrf/ros2/
 NVIDIA ACCELERATED ROS2 docker image \
 https://developer.nvidia.com/blog/accelerating-ai-modules-for-ros-and-ros-2-on-jetson/
 
+interesting thing ... \
+https://docs.ros.org/en/foxy/Tutorials/Building-Realtime-rt_preempt-kernel-for-ROS-2.html
+
 \\--------------------------------------\
 ## commands
 ```
