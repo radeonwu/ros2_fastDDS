@@ -1,6 +1,6 @@
 # ros2_sandbox
 ## adopted reference 
-https://github.com/NVIDIA/nvidia-docker/issues/534#issuecomment-436054364 \
+https://github.com/NVIDIA/nvidia-docker/issues/534#issuecomment-436054364
 
 Following the link above, I customized the Dockerfile and build the image successfully which is verified to support rviz2 ! \
 The Dockefile and start up scripts have been included in this repo.
@@ -18,7 +18,6 @@ https://developer.nvidia.com/blog/accelerating-ai-modules-for-ros-and-ros-2-on-j
 interesting thing ... \
 https://docs.ros.org/en/foxy/Tutorials/Building-Realtime-rt_preempt-kernel-for-ROS-2.html
 
-\\--------------------------------------\
 ## commands to run basic ros2 nodes
 ```
 docker pull osrf/ros:foxy-desktop
