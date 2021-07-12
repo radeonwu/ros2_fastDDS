@@ -1,14 +1,17 @@
 # ros2 docker image with libGL support(rviz2)
-## adopted reference 
+
+Two approaches to create ros2 with libGL support are verified working.
+## 1. create docker image from customized Dockerfile 
 https://github.com/NVIDIA/nvidia-docker/issues/534#issuecomment-436054364
 
 Following the link above, I customized the Dockerfile and build the image successfully which is verified to support rviz2 ! \
 The Dockefile and start up scripts have been included in this repo.
 
-## other references
+## 2. use OSRF official tool - rocker
 Another approach, which I also verified working, is to use rocker. But compared to pure docker file, its not as clean as the former.  \
 https://github.com/osrf/rocker
 
+## other useful references
 Tutorial on running ROS2 via docker \
 https://docs.ros.org/en/galactic/Guides/Run-2-nodes-in-single-or-separate-docker-containers.html?highlight=docker
 
