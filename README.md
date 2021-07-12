@@ -6,6 +6,9 @@ Following the link above, I customized the Dockerfile and build the image succes
 The Dockefile and start up scripts have been included in this repo.
 
 ## other references
+Another approach, which I also verified working, is to use rocker. But compared to pure docker file, its not as clean as the former.  \
+https://github.com/osrf/rocker
+
 Tutorial on running ROS2 via docker \
 https://docs.ros.org/en/galactic/Guides/Run-2-nodes-in-single-or-separate-docker-containers.html?highlight=docker
 
