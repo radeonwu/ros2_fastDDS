@@ -1,4 +1,4 @@
-# ros2_sandbox
+# ros2 docker image with libGL support(rviz2)
 ## adopted reference 
 https://github.com/NVIDIA/nvidia-docker/issues/534#issuecomment-436054364
 
