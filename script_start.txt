@@ -1,0 +1,17 @@
+    
+# docker run command    
+docker run --rm -it --gpus all  \
+        -e DISPLAY \
+        -e TERM   \
+        -e QT_X11_NO_MITSHM=1   \
+        -e XAUTHORITY=/tmp/.docker4go9n3_z.xauth \
+        -v /tmp/.docker4go9n3_z.xauth:/tmp/.docker4go9n3_z.xauth   \
+        -v /tmp/.X11-unix:/tmp/.X11-unix   \
+        -v /etc/localtime:/etc/localtime:ro \
+        -v /home/xiaojun/sandbox/libs:/opt/libs \
+        -v /home/xiaojun/sandbox/data:/opt/data \        
+        ros2:nvidia
+        
+# docker build command        
+docker build -t ros2:nvidia -f Dockerfile.nvidia .
+
