@@ -12,7 +12,7 @@ Another approach, which I also verified working, is to use rocker. But compared 
 https://github.com/osrf/rocker
 
 ## other useful references
-standaalone FASTDDS talk to ROS2 \
+standalone FASTDDS talk to ROS2 \
 https://github.com/briancaglioni/FASTDDS_ROS2_Pub_Sub_Guide
 
 Tutorial on running ROS2 via docker \
