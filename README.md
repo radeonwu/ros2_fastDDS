@@ -15,6 +15,9 @@ https://github.com/osrf/rocker
 standalone FASTDDS talk to ROS2 \
 https://github.com/briancaglioni/FASTDDS_ROS2_Pub_Sub_Guide
 
+fastDDS quick start \
+https://github.com/eProsima/Fast-DDS
+
 Tutorial on running ROS2 via docker \
 https://docs.ros.org/en/galactic/Guides/Run-2-nodes-in-single-or-separate-docker-containers.html?highlight=docker
 
