@@ -40,7 +40,7 @@ Note: the above configuration does not support rviz as libGL support is not pres
 ## ross dds options
 by default, the ros2 foxy docker image uses fastrtp dds, 
 ```
-sudo apt install ros-galactic-rmw-fastrtps-cpp
+sudo apt install ros-foxy-rmw-fastrtps-cpp
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 ```
 
