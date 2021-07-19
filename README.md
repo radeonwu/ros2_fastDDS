@@ -122,7 +122,8 @@ into
 Wparam.topic.topicName = "rt/scan";
 ```
 
-Then add LaserScan data publishing codes, as explained in the source file include in this repo.
+Then following the link below to add LaserScan data publishing codes, and the final source file is also include in this repo for reference. \
+https://github.com/ros-planning/navigation_tutorials/blob/indigo-devel/laser_scan_publisher_tutorial/src/laser_scan_publisher.cpp
 
 ### 3.3 build
 ```
