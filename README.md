@@ -1,15 +1,24 @@
 # ros2 docker image with libGL support(rviz2)
 
 Two approaches to create ros2 with libGL support are verified working.
-## 1. create docker image from customized Dockerfile 
+## 1.a create ROS2(Foxy) docker image from customized Dockerfile 
 https://github.com/NVIDIA/nvidia-docker/issues/534#issuecomment-436054364
 
 Following the link above, I customized the Dockerfile and build the image successfully which is verified to support rviz2 ! \
 The Dockefile and start up scripts have been included in this repo.
 
-## 2. use OSRF official tool - rocker
+## 1.b use OSRF official tool - rocker
 Another approach, which I also verified working, is to use rocker. But compared to pure docker file, its not as clean as the former.  \
 https://github.com/osrf/rocker
+
+# 2. FastDDS docker image
+follow install instructions below to load docker image\
+https://github.com/eProsima/Fast-DDS
+
+Download docker image from,
+https://eprosima.com/index.php/downloads-all
+
+
 
 ## other useful references
 standalone FASTDDS talk to ROS2 \
