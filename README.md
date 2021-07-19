@@ -173,7 +173,7 @@ docker run -it osrf/ros:foxy-desktop
 ```
 Note: the above configuration does not support rviz as libGL support is not present.
 
-## ross dds options
+## ROS2 dds options
 by default, the ros2 foxy docker image uses fastrtp dds, 
 ```
 sudo apt install ros-foxy-rmw-fastrtps-cpp
