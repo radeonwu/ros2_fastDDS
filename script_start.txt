@@ -2,7 +2,7 @@
 docker network create foo
 xhost +local:docker
 
-# docker run command    
+# ROS2 docker run command    
 docker run --rm -it --gpus all  \
         --net foo \
         --name master \
@@ -17,9 +17,23 @@ docker run --rm -it --gpus all  \
         -v /home/xiaojun/sandbox/data:/opt/data \
         ros2:nvidia
 
-# 2nd terminal
+# ROS2 2nd terminal
 nvidia-docker exec -it master bash
 
 # docker build command        
 docker build -t ros2:nvidia -f Dockerfile.nvidia .
 
+# FASTDDS docker run command    
+docker run --rm -it --gpus all  \
+        --net foo \
+        --name fastdds \
+        -e DISPLAY \
+        -e TERM   \
+        -e QT_X11_NO_MITSHM=1   \
+        -e XAUTHORITY=/tmp/.docker4go9n3_z.xauth \
+        -v /tmp/.docker4go9n3_z.xauth:/tmp/.docker4go9n3_z.xauth   \
+        -v /tmp/.X11-unix:/tmp/.X11-unix   \
+        -v /etc/localtime:/etc/localtime:ro \
+        -v /home/xiaojun/sandbox/libs:/opt/libs \
+        -v /home/xiaojun/sandbox/data:/opt/data \
+        ubuntu-fast-dds:v2.3.0
