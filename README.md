@@ -113,6 +113,7 @@ In Time.idl file, add underscore so that
 ```
 fastrtpsgen -typeros2 -example CMake LaserScan.idl
 ```
+### 3.3 change code
 in the generated source file LaserScanPublisher.cxx, change
 ```
 Wparam.topic.topicName = "LaserScanPubSubTopic";
@@ -125,13 +126,13 @@ Wparam.topic.topicName = "rt/scan";
 Then following the link below to add LaserScan data publishing codes, and the final source file is also include in this repo for reference. \
 https://github.com/ros-planning/navigation_tutorials/blob/indigo-devel/laser_scan_publisher_tutorial/src/laser_scan_publisher.cpp
 
-### 3.3 build
+### 3.4 build
 ```
 cmake .
 make
 ```
 
-### 3.4 run 
+### 3.5 run 
 ```
 ./LaserScan publisher
 ```
