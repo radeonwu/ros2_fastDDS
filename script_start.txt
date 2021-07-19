@@ -14,7 +14,7 @@ docker run --rm -it --gpus all  \
         -v /tmp/.X11-unix:/tmp/.X11-unix   \
         -v /etc/localtime:/etc/localtime:ro \
         -v /home/xiaojun/sandbox/libs:/opt/libs \
-        -v /home/xiaojun/sandbox/data:/opt/data \        
+        -v /home/xiaojun/sandbox/data:/opt/data \
         ros2:nvidia
 
 # 2nd terminal
