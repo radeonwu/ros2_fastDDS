@@ -12,13 +12,11 @@ Another approach, which I also verified working, is to use rocker. But compared 
 https://github.com/osrf/rocker
 
 ## 2. FastDDS docker image
-follow install instructions below to load docker image\
-https://github.com/eProsima/Fast-DDS
-
-Download docker image from,
+Download docker image \
 https://eprosima.com/index.php/downloads-all
 
-
+and follow install instructions to load docker image\
+https://github.com/eProsima/Fast-DDS
 
 ## other useful references
 standalone FASTDDS talk to ROS2 \
