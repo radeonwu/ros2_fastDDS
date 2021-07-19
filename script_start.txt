@@ -36,4 +36,5 @@ docker run --rm -it --gpus all  \
         -v /etc/localtime:/etc/localtime:ro \
         -v /home/xiaojun/sandbox/libs:/opt/libs \
         -v /home/xiaojun/sandbox/data:/opt/data \
-        ubuntu-fast-dds:v2.3.0
+        ubuntu-fast-dds:v2.3.0 \
+        bash
