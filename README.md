@@ -151,7 +151,8 @@ the /scan topic will be listed.
 
 ## other useful references
 standalone FASTDDS talk to ROS2 \
-https://github.com/briancaglioni/FASTDDS_ROS2_Pub_Sub_Guide
+https://github.com/briancaglioni/FASTDDS_ROS2_Pub_Sub_Guide \
+https://answers.ros.org/question/319723/use-ros2-fastrtps-with-standalone-fastrtps-programs/ \
 
 fastDDS quick start \
 https://github.com/eProsima/Fast-DDS
