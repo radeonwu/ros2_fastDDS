@@ -11,7 +11,7 @@ The Dockefile and start up scripts have been included in this repo.
 Another approach, which I also verified working, is to use rocker. But compared to pure docker file, its not as clean as the former.  \
 https://github.com/osrf/rocker
 
-# 2. FastDDS docker image
+## 2. FastDDS docker image
 follow install instructions below to load docker image\
 https://github.com/eProsima/Fast-DDS
 
