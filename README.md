@@ -139,13 +139,13 @@ make
 Then inside ROS2 container, run rviz2 and select /Scan topic to visualize, and change Fixed Frame to "laser_frame"
 then the laser scan data should be visualized.
 
+![Screenshot from 2021-07-20 02-41-31](https://user-images.githubusercontent.com/2787410/126212168-1c383a34-83e4-4f6d-a231-66beeb44e805.png)
 
 if run 
 ```
 ros2 topic list
 ```
 the /scan topic will be listed.
-
 
 ## other useful references
 standalone FASTDDS talk to ROS2 \
