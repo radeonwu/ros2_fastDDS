@@ -5,6 +5,7 @@ xhost +local:docker
 # docker run command    
 docker run --rm -it --gpus all  \
         --net foo \
+        --name master \
         -e DISPLAY \
         -e TERM   \
         -e QT_X11_NO_MITSHM=1   \
@@ -16,7 +17,8 @@ docker run --rm -it --gpus all  \
         -v /home/xiaojun/sandbox/data:/opt/data \        
         ros2:nvidia
 
-
+# 2nd terminal
+nvidia-docker exec -it master bash
 
 # docker build command        
 docker build -t ros2:nvidia -f Dockerfile.nvidia .
