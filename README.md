@@ -67,7 +67,7 @@ docker run -it \
 ```
 
 ## 3. Program and build FAST-DDS Publisher 
-As an example, I chose the ROS2 LaserScan topic to publish by Fast-DDS standalone publisher, and visualize the message using RVIZ2. The major reason to chose "LaserScan" message is because it contains .header variabel which further includes timestamp value.
+As an example, I chose the ROS2 LaserScan topic to publish by Fast-DDS standalone publisher, and visualize the message using RVIZ2. The major reason to chose "LaserScan" message is because it contains .header variabe which further includes .stamp value.
 
 ### 3.1 prepare IDL files
 copy 3 .idl files from ROS2 container 
