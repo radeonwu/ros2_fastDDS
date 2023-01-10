@@ -58,7 +58,7 @@ docker run -it
 
 ### 3. revise fastdds publisher code
 
-### 3.1 prepare IDL files
+#### 3.1 prepare IDL files
 copy 3 .idl files from ROS2 container 
 ```
 cp /opt/ros/foxy/share/sensor_msgs/msg/LaserScan.idl /opt/data/
@@ -98,12 +98,14 @@ In Time.idl file, add underscore so that
     struct _Time {
 ```
 
+#### 3.2 create source files using fastddsgen
 
 from within the fastdds docker container,
 ```
 fastddsgen -typeros2 -example CMake LaserScan.idl
 ```
 
+#### 3.3 source code adjustment
 please take note there are some changes that the current fastdds version 2.9 brings versus previous v2.0.0.
 
 in LaserScanPublisher.cxx source file,
@@ -112,6 +114,12 @@ participant_->create_topic(
         "LaserScanTopic",
 ```
 change the laser topic name from "LaserScanTopic" to "rt/scan"
+
+#### 3.4 build
+```
+cmake .
+make
+```
 
 ### 4. run ros2 bag + fastdds publisher
 
