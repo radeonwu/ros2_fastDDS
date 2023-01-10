@@ -19,3 +19,5 @@ install ubuntu-fastdds-suite:v2.9.0 from the following url,
 ```
 https://fast-dds.docs.eprosima.com/en/latest/docker/fastdds/fast_dds.html
 ```
+
+### 3. test ros2 bag
