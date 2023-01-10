@@ -15,9 +15,20 @@ or
 https://docs.ros.org/en/humble/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html
 ```
 ### 2. install fast DDS docker
-install ubuntu-fastdds-suite:v2.9.0 from the following url,
+download docker image of ubuntu-eprosima-dds-suite:v1.4.0 (as of Jan 2023) from the following download link,
 ```
-https://fast-dds.docs.eprosima.com/en/latest/docker/fastdds/fast_dds.html
+https://www.eprosima.com/index.php/component/ars/repository/eprosima-dds-suite
+```
+then load the docker image and run it,
+```
+docker load -i ubuntu-eprosima-dds-suite\ v1.4.0.tar
+docker run -it         
+  --privileged         
+  --net foo         
+  -e DISPLAY=$DISPLAY         
+  -v /tmp/.X11-unix:/tmp/.X11-unix         
+  -v /home/xiaojun/sandbox/data:/opt/data         
+  ubuntu-eprosima-dds-suite:v1.4.0
 ```
 
 ### 3. test ros2 bag
