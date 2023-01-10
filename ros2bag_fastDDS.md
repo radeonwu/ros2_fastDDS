@@ -31,4 +31,17 @@ docker run -it
   ubuntu-eprosima-dds-suite:v1.4.0
 ```
 
-### 3. test ros2 bag
+### revise fastdds publisher code
+
+
+
+### run ros2 bag + fastdds publisher
+record
+```
+ros2 bag record /scan
+```
+and replay
+```
+ros2 bag play rosbag2_2023_01_11-00_52_28/
+```
+
