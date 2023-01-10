@@ -14,11 +14,36 @@ or
 ```
 https://docs.ros.org/en/humble/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html
 ```
+
+To make sure graphics app can run from within the docker image, run
+```
+docker network create foo
+xhost +local:docker
+```
+
+and now run ros2 docker image,
+```
+docker run --rm -it --gpus all  \
+        --net foo \
+        --name master \
+        -e DISPLAY \
+        -e TERM   \
+        -e QT_X11_NO_MITSHM=1   \
+        -v /tmp/.X11-unix:/tmp/.X11-unix   \
+        -v /etc/localtime:/etc/localtime:ro \
+        -v /home/xiaojun/sandbox/libs:/opt/libs \
+        -v /home/xiaojun/sandbox/data:/opt/data \
+        osrf/ros:humble-desktop
+```
+
 ### 2. install fast DDS docker
 download docker image of ubuntu-eprosima-dds-suite:v1.4.0 (as of Jan 2023) from the following download link,
 ```
 https://www.eprosima.com/index.php/component/ars/repository/eprosima-dds-suite
 ```
+Take note that fastddsgen tool is already included in this docker image. 
+
+
 then load the docker image and run it,
 ```
 docker load -i ubuntu-eprosima-dds-suite\ v1.4.0.tar
@@ -31,11 +56,71 @@ docker run -it
   ubuntu-eprosima-dds-suite:v1.4.0
 ```
 
-### revise fastdds publisher code
+### 3. revise fastdds publisher code
+
+### 3.1 prepare IDL files
+copy 3 .idl files from ROS2 container 
+```
+cp /opt/ros/foxy/share/sensor_msgs/msg/LaserScan.idl /opt/data/
+cp /opt/ros/foxy/share/std_msgs/msg/Header.idl /opt/data/
+cp /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl /opt/data/
+```
+
+In FAST-DDS container,
+```
+mkdir wspace_fastdds/LaserScan_test
+cd wspace_fastdds/LaserScan_test
+mv /opt/data/LaserScan.idl .
+mv /opt/data/Header.idl .
+mv /opt/data/Time.idl .
+```
+In LaserScan.idl file, change 
+```#include "std_msgs/msg/Header.idl"```
+into 
+```#include "Header.idl"```
+
+add underscore so that 
+```
+    struct _LaserScan {
+```
+
+In Header.idl file, change 
+```#include "builtin_interfaces/msg/Time.idl"```
+into 
+```#include "Time.idl"```
+add underscore so that 
+```
+    struct _Header {
+```
+
+In Time.idl file, add underscore so that 
+```
+    struct _Time {
+```
 
 
+from within the fastdds docker container,
+```
+fastddsgen -typeros2 -example CMake LaserScan.idl
+```
 
-### run ros2 bag + fastdds publisher
+please take note there are some changes that the current fastdds version 2.9 brings versus previous v2.0.0.
+
+in LaserScanPublisher.cxx source file,
+```
+participant_->create_topic(
+        "LaserScanTopic",
+```
+change the laser topic name from "LaserScanTopic" to "rt/scan"
+
+### 4. run ros2 bag + fastdds publisher
+
+```
+docker exec -it master bash
+source /opt/ros/humble/setup.bash
+```
+
+from within ros2 container, \
 record
 ```
 ros2 bag record /scan
@@ -45,3 +130,7 @@ and replay
 ros2 bag play rosbag2_2023_01_11-00_52_28/
 ```
 
+use rviz2 to check the replayed laser_scan message can be visualized properly,
+```
+rviz2 
+```
