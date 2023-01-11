@@ -156,6 +156,9 @@ source /opt/ros/humble/setup.bash
 rviz2 
 ```
 
+file:///home/xiaojun/Pictures/Screenshot%20from%202023-01-11%2015-40-56.png![image](https://user-images.githubusercontent.com/2787410/211746516-d29e3bff-0985-40e8-9899-95175fb399e9.png)
+
+
 ### Useful references
 refer to fastddsgen documentation for more information on how to use fastddsgen command line
 ```
