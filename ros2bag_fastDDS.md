@@ -124,6 +124,11 @@ make
 ```
 
 ### 4. run ros2 bag + fastdds publisher
+from within fastdds container,
+```
+./LaserScan publisher
+```
+
 
 ```
 docker exec -it master bash
