@@ -153,7 +153,11 @@ rviz2
 
 ### Useful references
 refer to fastddsgen documentation for more information on how to use fastddsgen command line
-```https://fast-dds.docs.eprosima.com/en/latest/fastddsgen/usage/usage.html```
+```
+https://fast-dds.docs.eprosima.com/en/latest/fastddsgen/usage/usage.html
+```
 
 Making Fast-DDS interoperate with ROS 2
-```https://github.com/osrf/ros2_raw_dds_example```
+```
+https://github.com/osrf/ros2_raw_dds_example
+```
