@@ -49,12 +49,12 @@ Take note that fastddsgen tool is already included in this docker image.
 then load the docker image and run it,
 ```
 docker load -i ubuntu-eprosima-dds-suite\ v1.4.0.tar
-docker run -it         
-  --privileged         
-  --net foo         
-  -e DISPLAY=$DISPLAY         
-  -v /tmp/.X11-unix:/tmp/.X11-unix         
-  -v /home/xiaojun/sandbox/data:/opt/data         
+docker run -it \
+  --privileged \
+  --net foo \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -v /home/xiaojun/sandbox/data:/opt/data \
   ubuntu-eprosima-dds-suite:v1.4.0
 ```
 
