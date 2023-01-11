@@ -106,10 +106,6 @@ from within the fastdds docker container,
 ```
 fastddsgen -typeros2 -example CMake LaserScan.idl
 ```
-refer to fastddsgen documentation for more information on how to use fastddsgen command line
-```
-https://fast-dds.docs.eprosima.com/en/latest/fastddsgen/usage/usage.html
-```
 
 #### 3.3 source code adjustment
 please take note there are some changes that the current fastdds version 2.9 brings comparing to previous v2.0.0.
@@ -154,3 +150,10 @@ docker exec -it master bash
 source /opt/ros/humble/setup.bash
 rviz2 
 ```
+
+### Useful references
+refer to fastddsgen documentation for more information on how to use fastddsgen command line
+```https://fast-dds.docs.eprosima.com/en/latest/fastddsgen/usage/usage.html```
+
+Making Fast-DDS interoperate with ROS 2
+```https://github.com/osrf/ros2_raw_dds_example```
